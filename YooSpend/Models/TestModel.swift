@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import Realm
+
+class TestModel: Codable {
+    @objc dynamic var name = ""
+}

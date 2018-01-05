@@ -14,6 +14,20 @@ class YooSpendTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let json = """
+{
+ "name": "Federico Zanetello"
+}
+""".data(using: .utf8)!
+        // let data = Data(base64Encoded: string)
+        let parser = Parser()
+        do {
+            let a: TestModel = try parser.parsData(data: json)
+            print(a)
+        } catch {
+            print(error)
+        }
     }
     
     override func tearDown() {

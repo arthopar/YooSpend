@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  BaseViewModel.swift
 //  YooSpend
 //
 //  Created by Artak on 12/24/17.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import RxSwift
+
+class BaseViewModel {
+    let isLoading = Variable<Bool>(false)
+    
+}

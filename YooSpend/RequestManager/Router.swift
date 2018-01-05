@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+enum Method: String {
+    case post = "POST"
+    case get = "GET"
+}
+
+protocol Router {
+    var baseUrl: String { get }
+    var parameters: [String: Any]? { get }
+    var method: Method { get }
+}
+
+
+extension Router {
+    var baseUrl: String { return "https://gooogle.com" }
+    var parameters: [String: Any]? { return nil }
+    var method: Method { return .get }
+}

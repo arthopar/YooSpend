@@ -8,22 +8,43 @@
 
 import Foundation
 
+enum Response<T: Decodable> {
+    case error(Error)
+    case success(T)
+}
+
 class RestApiManager {
-    func makeHTTPPostRequest(path: String, body: [String: AnyObject], onCompletion: ServiceResponse) {
+    private func makeRequest<T>(parameters: Router, onCompletion: ((Response<T>) -> Void)) {
         var err: NSError?
-        let request = NSMutableURLRequest(URL: NSURL(string: path)!)
+        let request = NSMutableURLRequest(url: URL(string: parameters.baseUrl)!)
         
         // Set the method to POST
-        request.HTTPMethod = "POST"
+        request.httpMethod = parameters.method.rawValue
         
         // Set the POST body for the request
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: nil, error: &err)
-        let session = NSURLSession.sharedSession()
+        request.HTTPBody = JSONSerialization.dataWithJSONObject(parameters.parameters, options: nil)
         
+        guard let error == err else {
+            onCompletion(.error(error))
+            
+            return
+        }
+
+        let session = bURLSession.sharedSession()
+        
+        let response: Response<T>
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            let json:JSON = JSON(data: data)
-            onCompletion(json, err)
+            let parser = Parser()
+            do {
+                let object: T = try parser.parsData(data: data)
+                reponse = .success(object)
+            } catch {
+                response = .error(error)
+            }
+
+            onCompletion(response)
         })
+
         task.resume()
     }
 }
