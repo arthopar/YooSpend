@@ -8,41 +8,58 @@
 
 import Foundation
 
+class ServerError: ExpressibleByStringLiteral, Error {
+    typealias StringLiteralType = String
+    let errorMessage: String
+
+    public required init(stringLiteral value: StringLiteralType) {
+        errorMessage = value
+    }
+    
+    public init(error: Error) {
+        errorMessage = error.localizedDescription
+    }
+}
+
 enum Response<T: Decodable> {
-    case error(Error)
+    case error(ServerError)
     case success(T)
 }
 
 class RestApiManager {
-    private func makeRequest<T>(parameters: Router, onCompletion: ((Response<T>) -> Void)) {
-        var err: NSError?
-        let request = NSMutableURLRequest(url: URL(string: parameters.baseUrl)!)
+    private func makeRequest<T>(parameters: Router, onCompletion: @escaping ((Response<T>) -> Void)) {
+        guard let url = URL(string: parameters.baseUrl) else {
+            onCompletion(Response.error(""))
+            
+            return
+        }
+
+        var request = URLRequest(url: url)
         
         // Set the method to POST
         request.httpMethod = parameters.method.rawValue
         
         // Set the POST body for the request
-        request.HTTPBody = JSONSerialization.dataWithJSONObject(parameters.parameters, options: nil)
-        
-        guard let error == err else {
-            onCompletion(.error(error))
-            
-            return
+        if let params = parameters.parameters {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
         }
 
-        let session = bURLSession.sharedSession()
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let response: Response<T>
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        let session = URLSession.shared
+
+        let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
             let parser = Parser()
+            let responseObject: Response<T>
             do {
-                let object: T = try parser.parsData(data: data)
-                reponse = .success(object)
+                let object: T = try parser.parsData(data: data!)
+                responseObject = .success(object)
             } catch {
-                response = .error(error)
+                responseObject = .error(ServerError(error: error))
             }
 
-            onCompletion(response)
+            onCompletion(responseObject)
         })
 
         task.resume()
