@@ -17,6 +17,8 @@ protocol Router {
     var baseUrl: String { get }
     var parameters: [String: Any]? { get }
     var method: Method { get }
+    var resource: String { get }
+    var localization: String { get }
 }
 
 

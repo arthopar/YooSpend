@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE45063E1FF0444B00DC65B6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9FA1321FEEF3EA00B77E87 /* RxSwift.framework */; };
-		CE45063F1FF0444B00DC65B6 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9FA1321FEEF3EA00B77E87 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE4506411FF0450600DC65B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9FA1311FEEF3EA00B77E87 /* RealmSwift.framework */; };
-		CE4506421FF0450600DC65B6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9FA1311FEEF3EA00B77E87 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE4506441FF0454E00DC65B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4506431FF0454E00DC65B6 /* Realm.framework */; };
-		CE4506451FF0454E00DC65B6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE4506431FF0454E00DC65B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE4506471FF19D8900DC65B6 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4506461FF19D8900DC65B6 /* RestApiManager.swift */; };
 		CE45064A1FF19F0000DC65B6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4506491FF19F0000DC65B6 /* Router.swift */; };
 		CE9FA1031FEEE2A400B77E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA1021FEEE2A400B77E87 /* AppDelegate.swift */; };
@@ -22,12 +16,23 @@
 		CE9FA10D1FEEE2A400B77E87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9FA10B1FEEE2A400B77E87 /* LaunchScreen.storyboard */; };
 		CE9FA1181FEEE2A500B77E87 /* YooSpendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA1171FEEE2A500B77E87 /* YooSpendTests.swift */; };
 		CE9FA1231FEEE2A500B77E87 /* YooSpendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA1221FEEE2A500B77E87 /* YooSpendUITests.swift */; };
-		CE9FA1331FEEF3EA00B77E87 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9FA1311FEEF3EA00B77E87 /* RealmSwift.framework */; };
-		CE9FA1341FEEF3EA00B77E87 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9FA1321FEEF3EA00B77E87 /* RxSwift.framework */; };
 		CE9FA1371FF01F0F00B77E87 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA1361FF01F0F00B77E87 /* BaseViewModel.swift */; };
 		CE9FA1391FF0238700B77E87 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA1381FF0238700B77E87 /* BaseViewController.swift */; };
 		CE9FA13C1FF0389100B77E87 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA13B1FF0389100B77E87 /* TestModel.swift */; };
 		CE9FA13E1FF039BA00B77E87 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA13D1FF039BA00B77E87 /* Parser.swift */; };
+		CEB2D44D2025E06A0056A39B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2D44C2025E06A0056A39B /* RxCocoa.framework */; };
+		CEB2D44E2025E06A0056A39B /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2D44C2025E06A0056A39B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEB2D4502025E1720056A39B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2D44F2025E1720056A39B /* Realm.framework */; };
+		CEB2D4512025E1720056A39B /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2D44F2025E1720056A39B /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEB2D4532025E3490056A39B /* ResponseDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2D4522025E3490056A39B /* ResponseDataContainer.swift */; };
+		CEF1012420264B810059596F /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1012320264B810059596F /* String+Localization.swift */; };
+		CEF3CD322025DE1300453437 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3CD2F2025DE1300453437 /* RxSwift.framework */; };
+		CEF3CD332025DE1300453437 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3CD2F2025DE1300453437 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF3CD362025DE1300453437 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3CD312025DE1300453437 /* RealmSwift.framework */; };
+		CEF3CD372025DE1300453437 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF3CD312025DE1300453437 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEF705962025D85700B07B98 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF705942025D85700B07B98 /* NavigationController.swift */; };
+		CEF705972025D85700B07B98 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF705952025D85700B07B98 /* TabBarController.swift */; };
+		CEF7059A2025D89900B07B98 /* UIViewController+ActivityLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF705992025D89900B07B98 /* UIViewController+ActivityLoading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +59,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE4506451FF0454E00DC65B6 /* Realm.framework in Embed Frameworks */,
-				CE4506421FF0450600DC65B6 /* RealmSwift.framework in Embed Frameworks */,
-				CE45063F1FF0444B00DC65B6 /* RxSwift.framework in Embed Frameworks */,
+				CEB2D4512025E1720056A39B /* Realm.framework in Embed Frameworks */,
+				CEB2D44E2025E06A0056A39B /* RxCocoa.framework in Embed Frameworks */,
+				CEF3CD332025DE1300453437 /* RxSwift.framework in Embed Frameworks */,
+				CEF3CD372025DE1300453437 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE4506431FF0454E00DC65B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		CE4506461FF19D8900DC65B6 /* RestApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		CE4506491FF19F0000DC65B6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CE9FA0FF1FEEE2A400B77E87 /* YooSpend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YooSpend.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,12 +85,19 @@
 		CE9FA11E1FEEE2A500B77E87 /* YooSpendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YooSpendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9FA1221FEEE2A500B77E87 /* YooSpendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YooSpendUITests.swift; sourceTree = "<group>"; };
 		CE9FA1241FEEE2A500B77E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE9FA1311FEEF3EA00B77E87 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		CE9FA1321FEEF3EA00B77E87 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CE9FA1361FF01F0F00B77E87 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CE9FA1381FF0238700B77E87 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE9FA13B1FF0389100B77E87 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		CE9FA13D1FF039BA00B77E87 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		CEB2D44C2025E06A0056A39B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		CEB2D44F2025E1720056A39B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		CEB2D4522025E3490056A39B /* ResponseDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataContainer.swift; sourceTree = "<group>"; };
+		CEF1012320264B810059596F /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		CEF3CD2F2025DE1300453437 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CEF3CD312025DE1300453437 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		CEF705942025D85700B07B98 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CEF705952025D85700B07B98 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CEF705992025D89900B07B98 /* UIViewController+ActivityLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityLoading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9FA1331FEEF3EA00B77E87 /* RealmSwift.framework in Frameworks */,
-				CE9FA1341FEEF3EA00B77E87 /* RxSwift.framework in Frameworks */,
-				CE4506411FF0450600DC65B6 /* RealmSwift.framework in Frameworks */,
-				CE45063E1FF0444B00DC65B6 /* RxSwift.framework in Frameworks */,
-				CE4506441FF0454E00DC65B6 /* Realm.framework in Frameworks */,
+				CEB2D4502025E1720056A39B /* Realm.framework in Frameworks */,
+				CEB2D44D2025E06A0056A39B /* RxCocoa.framework in Frameworks */,
+				CEF3CD322025DE1300453437 /* RxSwift.framework in Frameworks */,
+				CEF3CD362025DE1300453437 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +142,10 @@
 		CE9FA0F61FEEE2A400B77E87 = {
 			isa = PBXGroup;
 			children = (
-				CE4506431FF0454E00DC65B6 /* Realm.framework */,
+				CEB2D44F2025E1720056A39B /* Realm.framework */,
+				CEB2D44C2025E06A0056A39B /* RxCocoa.framework */,
+				CEF3CD312025DE1300453437 /* RealmSwift.framework */,
+				CEF3CD2F2025DE1300453437 /* RxSwift.framework */,
 				CE9FA1011FEEE2A400B77E87 /* YooSpend */,
 				CE9FA1161FEEE2A500B77E87 /* YooSpendTests */,
 				CE9FA1211FEEE2A500B77E87 /* YooSpendUITests */,
@@ -153,6 +167,7 @@
 		CE9FA1011FEEE2A400B77E87 /* YooSpend */ = {
 			isa = PBXGroup;
 			children = (
+				CEF705982025D88300B07B98 /* Extensions */,
 				CE4506481FF19E7F00DC65B6 /* RequestManager */,
 				CE9FA13A1FF0386500B77E87 /* Models */,
 				CE9FA1351FF01E4400B77E87 /* Common */,
@@ -187,8 +202,6 @@
 		CE9FA1301FEEF3E900B77E87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE9FA1311FEEF3EA00B77E87 /* RealmSwift.framework */,
-				CE9FA1321FEEF3EA00B77E87 /* RxSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +209,8 @@
 		CE9FA1351FF01E4400B77E87 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CEF705942025D85700B07B98 /* NavigationController.swift */,
+				CEF705952025D85700B07B98 /* TabBarController.swift */,
 				CE9FA1361FF01F0F00B77E87 /* BaseViewModel.swift */,
 				CE9FA1381FF0238700B77E87 /* BaseViewController.swift */,
 			);
@@ -205,9 +220,19 @@
 		CE9FA13A1FF0386500B77E87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2D4522025E3490056A39B /* ResponseDataContainer.swift */,
 				CE9FA13B1FF0389100B77E87 /* TestModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF705982025D88300B07B98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEF705992025D89900B07B98 /* UIViewController+ActivityLoading.swift */,
+				CEF1012320264B810059596F /* String+Localization.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,10 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF7059A2025D89900B07B98 /* UIViewController+ActivityLoading.swift in Sources */,
+				CEF1012420264B810059596F /* String+Localization.swift in Sources */,
 				CE45064A1FF19F0000DC65B6 /* Router.swift in Sources */,
+				CEB2D4532025E3490056A39B /* ResponseDataContainer.swift in Sources */,
 				CE9FA1051FEEE2A400B77E87 /* ViewController.swift in Sources */,
 				CE9FA1391FF0238700B77E87 /* BaseViewController.swift in Sources */,
+				CEF705972025D85700B07B98 /* TabBarController.swift in Sources */,
 				CE9FA13E1FF039BA00B77E87 /* Parser.swift in Sources */,
+				CEF705962025D85700B07B98 /* NavigationController.swift in Sources */,
 				CE9FA13C1FF0389100B77E87 /* TestModel.swift in Sources */,
 				CE9FA1371FF01F0F00B77E87 /* BaseViewModel.swift in Sources */,
 				CE4506471FF19D8900DC65B6 /* RestApiManager.swift in Sources */,
