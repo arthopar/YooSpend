@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1096362027975300365A0A /* BurgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1096352027975300365A0A /* BurgerMenuViewController.swift */; };
+		CE10963920279C6800365A0A /* BurgerMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10963820279C6800365A0A /* BurgerMenuItem.swift */; };
+		CE10963B20279FED00365A0A /* BurgerMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10963A20279FED00365A0A /* BurgerMenuCell.swift */; };
+		CE10963D2027A3AA00365A0A /* BurgerMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10963C2027A3AA00365A0A /* BurgerMenuHeaderView.swift */; };
 		CE4506471FF19D8900DC65B6 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4506461FF19D8900DC65B6 /* RestApiManager.swift */; };
 		CE45064A1FF19F0000DC65B6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4506491FF19F0000DC65B6 /* Router.swift */; };
 		CE9FA1031FEEE2A400B77E87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FA1021FEEE2A400B77E87 /* AppDelegate.swift */; };
@@ -70,6 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1096352027975300365A0A /* BurgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewController.swift; sourceTree = "<group>"; };
+		CE10963820279C6800365A0A /* BurgerMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuItem.swift; sourceTree = "<group>"; };
+		CE10963A20279FED00365A0A /* BurgerMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuCell.swift; sourceTree = "<group>"; };
+		CE10963C2027A3AA00365A0A /* BurgerMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuHeaderView.swift; sourceTree = "<group>"; };
 		CE4506461FF19D8900DC65B6 /* RestApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		CE4506491FF19F0000DC65B6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CE9FA0FF1FEEE2A400B77E87 /* YooSpend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YooSpend.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +137,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE10963720279BB500365A0A /* BurgerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CE9FA1061FEEE2A400B77E87 /* Main.storyboard */,
+				CE1096352027975300365A0A /* BurgerMenuViewController.swift */,
+				CE10963820279C6800365A0A /* BurgerMenuItem.swift */,
+				CE10963A20279FED00365A0A /* BurgerMenuCell.swift */,
+				CE10963C2027A3AA00365A0A /* BurgerMenuHeaderView.swift */,
+			);
+			path = BurgerMenu;
+			sourceTree = "<group>";
+		};
 		CE4506481FF19E7F00DC65B6 /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +193,6 @@
 				CE9FA1351FF01E4400B77E87 /* Common */,
 				CE9FA1021FEEE2A400B77E87 /* AppDelegate.swift */,
 				CE9FA1041FEEE2A400B77E87 /* ViewController.swift */,
-				CE9FA1061FEEE2A400B77E87 /* Main.storyboard */,
 				CE9FA1091FEEE2A400B77E87 /* Assets.xcassets */,
 				CE9FA10B1FEEE2A400B77E87 /* LaunchScreen.storyboard */,
 				CE9FA10E1FEEE2A400B77E87 /* Info.plist */,
@@ -209,6 +228,7 @@
 		CE9FA1351FF01E4400B77E87 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE10963720279BB500365A0A /* BurgerMenu */,
 				CEF705942025D85700B07B98 /* NavigationController.swift */,
 				CEF705952025D85700B07B98 /* TabBarController.swift */,
 				CE9FA1361FF01F0F00B77E87 /* BaseViewModel.swift */,
@@ -380,6 +400,10 @@
 				CE9FA13E1FF039BA00B77E87 /* Parser.swift in Sources */,
 				CEF705962025D85700B07B98 /* NavigationController.swift in Sources */,
 				CE9FA13C1FF0389100B77E87 /* TestModel.swift in Sources */,
+				CE10963920279C6800365A0A /* BurgerMenuItem.swift in Sources */,
+				CE10963B20279FED00365A0A /* BurgerMenuCell.swift in Sources */,
+				CE1096362027975300365A0A /* BurgerMenuViewController.swift in Sources */,
+				CE10963D2027A3AA00365A0A /* BurgerMenuHeaderView.swift in Sources */,
 				CE9FA1371FF01F0F00B77E87 /* BaseViewModel.swift in Sources */,
 				CE4506471FF19D8900DC65B6 /* RestApiManager.swift in Sources */,
 				CE9FA1031FEEE2A400B77E87 /* AppDelegate.swift in Sources */,

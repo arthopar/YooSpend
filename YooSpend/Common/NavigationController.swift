@@ -13,7 +13,7 @@ class NavigationController: UINavigationController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //self.navigationBar.barTintColor = Theme.mainColor
+        self.navigationBar.barTintColor = UIColor.red//Theme.mainColor
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
