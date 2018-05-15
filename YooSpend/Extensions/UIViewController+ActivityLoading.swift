@@ -15,18 +15,12 @@ protocol ActivityLoading: class {
 extension ActivityLoading where Self: UIViewController {
     func showLoader() {
         if activityIndicator == nil {
-            let backgroundView = UIView()
-            backgroundView.translatesAutoresizingMaskIntoConstraints = false
-            self.view.insertSubview(backgroundView, at: 1000)
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            let backgroundView = UIView.autoLayoutView()
+            view.addSubviewWithInsents(view: backgroundView)
             backgroundView.backgroundColor = UIColor.clear
             
             
-            let loader = UIView()
-            loader.translatesAutoresizingMaskIntoConstraints = false
+            let loader = UIView.autoLayoutView()
             backgroundView.addSubview(loader)
             loader.heightAnchor.constraint(equalToConstant: 80).isActive = true
             loader.widthAnchor.constraint(equalToConstant: 80).isActive = true
@@ -43,7 +37,7 @@ extension ActivityLoading where Self: UIViewController {
             
             self.activityIndicator = backgroundView
         }
-        
+
         activityIndicator?.isHidden = false
     }
     
