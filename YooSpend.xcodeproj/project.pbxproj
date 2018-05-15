@@ -11,6 +11,7 @@
 		5C390F9820AA383C0080D5B8 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C390F9620AA383C0080D5B8 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C390F9B20AA383C0080D5B8 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C390F9420AA383C0080D5B8 /* Core.framework */; };
 		5C390F9C20AA383C0080D5B8 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C390F9420AA383C0080D5B8 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5C42A14720AB7ADF009AAA28 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C42A14620AB7ADF009AAA28 /* Theme.swift */; };
 		CE1096362027975300365A0A /* BurgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1096352027975300365A0A /* BurgerMenuViewController.swift */; };
 		CE10963920279C6800365A0A /* BurgerMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10963820279C6800365A0A /* BurgerMenuItem.swift */; };
 		CE10963B20279FED00365A0A /* BurgerMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10963A20279FED00365A0A /* BurgerMenuCell.swift */; };
@@ -78,6 +79,7 @@
 		5C390F9420AA383C0080D5B8 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C390F9620AA383C0080D5B8 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		5C390F9720AA383C0080D5B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C42A14620AB7ADF009AAA28 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CE1096352027975300365A0A /* BurgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuViewController.swift; sourceTree = "<group>"; };
 		CE10963820279C6800365A0A /* BurgerMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuItem.swift; sourceTree = "<group>"; };
 		CE10963A20279FED00365A0A /* BurgerMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenuCell.swift; sourceTree = "<group>"; };
@@ -144,12 +146,20 @@
 		5C390F9520AA383C0080D5B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5C42A14820AB7BA7009AAA28 /* DbManager */,
 				CE4506481FF19E7F00DC65B6 /* RequestManager */,
 				CE9FA13A1FF0386500B77E87 /* Models */,
 				5C390F9620AA383C0080D5B8 /* Core.h */,
 				5C390F9720AA383C0080D5B8 /* Info.plist */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		5C42A14820AB7BA7009AAA28 /* DbManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DbManager;
 			sourceTree = "<group>";
 		};
 		CE10963720279BB500365A0A /* BurgerMenu */ = {
@@ -244,6 +254,7 @@
 				CEF705952025D85700B07B98 /* TabBarController.swift */,
 				CE9FA1361FF01F0F00B77E87 /* BaseViewModel.swift */,
 				CE9FA1381FF0238700B77E87 /* BaseViewController.swift */,
+				5C42A14620AB7ADF009AAA28 /* Theme.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -485,6 +496,7 @@
 				CE10963920279C6800365A0A /* BurgerMenuItem.swift in Sources */,
 				CE10963B20279FED00365A0A /* BurgerMenuCell.swift in Sources */,
 				5C390F8E20AA31CD0080D5B8 /* UIView+Extensions.swift in Sources */,
+				5C42A14720AB7ADF009AAA28 /* Theme.swift in Sources */,
 				CE1096362027975300365A0A /* BurgerMenuViewController.swift in Sources */,
 				CE10963D2027A3AA00365A0A /* BurgerMenuHeaderView.swift in Sources */,
 				CE9FA1371FF01F0F00B77E87 /* BaseViewModel.swift in Sources */,
