@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1136D620ACC9CE002CA5A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1136D520ACC9CE002CA5A5 /* MainViewController.swift */; };
+		5C1136D820ACC9EB002CA5A5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1136D720ACC9EB002CA5A5 /* MainViewModel.swift */; };
+		5C1136DC20ACD044002CA5A5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1136DB20ACD044002CA5A5 /* UIViewController+Extensions.swift */; };
+		5C1CCF9520B4A3000066CA0F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1CCF9420B4A3000066CA0F /* Navigation.swift */; };
 		5C390F8E20AA31CD0080D5B8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C390F8D20AA31CD0080D5B8 /* UIView+Extensions.swift */; };
 		5C390F9820AA383C0080D5B8 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C390F9620AA383C0080D5B8 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C390F9B20AA383C0080D5B8 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C390F9420AA383C0080D5B8 /* Core.framework */; };
@@ -75,6 +79,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C1136D520ACC9CE002CA5A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5C1136D720ACC9EB002CA5A5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5C1136DB20ACD044002CA5A5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		5C1CCF9420B4A3000066CA0F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		5C390F8D20AA31CD0080D5B8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		5C390F9420AA383C0080D5B8 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C390F9620AA383C0080D5B8 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
@@ -143,6 +151,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1136D320ACC9AE002CA5A5 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				5C1136D420ACC9B7002CA5A5 /* Main */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		5C1136D420ACC9B7002CA5A5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5C1136DA20ACD02B002CA5A5 /* Views */,
+				5C1136D920ACD023002CA5A5 /* ViewProvider */,
+				5C1136D520ACC9CE002CA5A5 /* MainViewController.swift */,
+				5C1136D720ACC9EB002CA5A5 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5C1136D920ACD023002CA5A5 /* ViewProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewProvider;
+			sourceTree = "<group>";
+		};
+		5C1136DA20ACD02B002CA5A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5C390F9520AA383C0080D5B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +251,7 @@
 		CE9FA1011FEEE2A400B77E87 /* YooSpend */ = {
 			isa = PBXGroup;
 			children = (
+				5C1136D320ACC9AE002CA5A5 /* Pages */,
 				CEF705982025D88300B07B98 /* Extensions */,
 				CE9FA1351FF01E4400B77E87 /* Common */,
 				CE9FA1021FEEE2A400B77E87 /* AppDelegate.swift */,
@@ -255,6 +297,7 @@
 				CE9FA1361FF01F0F00B77E87 /* BaseViewModel.swift */,
 				CE9FA1381FF0238700B77E87 /* BaseViewController.swift */,
 				5C42A14620AB7ADF009AAA28 /* Theme.swift */,
+				5C1CCF9420B4A3000066CA0F /* Navigation.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -271,6 +314,7 @@
 		CEF705982025D88300B07B98 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5C1136DB20ACD044002CA5A5 /* UIViewController+Extensions.swift */,
 				CEF705992025D89900B07B98 /* UIViewController+ActivityLoading.swift */,
 				CEF1012320264B810059596F /* String+Localization.swift */,
 				5C390F8D20AA31CD0080D5B8 /* UIView+Extensions.swift */,
@@ -460,10 +504,16 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1136DC20ACD044002CA5A5 /* UIViewController+Extensions.swift in Sources */,
 				CEF7059A2025D89900B07B98 /* UIViewController+ActivityLoading.swift in Sources */,
 				CEF1012420264B810059596F /* String+Localization.swift in Sources */,
 				CE45064A1FF19F0000DC65B6 /* Router.swift in Sources */,
@@ -497,11 +548,14 @@
 				CE10963B20279FED00365A0A /* BurgerMenuCell.swift in Sources */,
 				5C390F8E20AA31CD0080D5B8 /* UIView+Extensions.swift in Sources */,
 				5C42A14720AB7ADF009AAA28 /* Theme.swift in Sources */,
+				5C1136D820ACC9EB002CA5A5 /* MainViewModel.swift in Sources */,
 				CE1096362027975300365A0A /* BurgerMenuViewController.swift in Sources */,
+				5C1CCF9520B4A3000066CA0F /* Navigation.swift in Sources */,
 				CE10963D2027A3AA00365A0A /* BurgerMenuHeaderView.swift in Sources */,
 				CE9FA1371FF01F0F00B77E87 /* BaseViewModel.swift in Sources */,
 				CE4506471FF19D8900DC65B6 /* RestApiManager.swift in Sources */,
 				CE9FA1031FEEE2A400B77E87 /* AppDelegate.swift in Sources */,
+				5C1136D620ACC9CE002CA5A5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

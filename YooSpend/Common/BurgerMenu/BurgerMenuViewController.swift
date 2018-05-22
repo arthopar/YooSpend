@@ -35,7 +35,7 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func showViewController(for index: Int) {
-        let viewController = UIViewController()
+        let viewController = MainViewController.initFromStoryboard()
         viewController.view.backgroundColor = UIColor.green
         
         burgerMenuNavigation?.viewControllers = [viewController]

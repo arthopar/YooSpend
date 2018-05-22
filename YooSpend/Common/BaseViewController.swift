@@ -19,6 +19,8 @@ class BaseViewController<T: BaseViewModel>: UIViewController, ActivityLoading {
     //let errorView = ErrorView.loadNib() as! ErrorView
     //let emptyView = ErrorView.loadNib() as! ErrorView
 
+    var navigation: Navigation?
+
     var withBackground: Bool {
         return false
     }

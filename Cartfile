@@ -1,2 +1,5 @@
+github "Swinject/SwinjectStoryboard"
+github "Swinject/SwinjectAutoregistration"
+github "Swinject/Swinject"
 github "ReactiveX/RxSwift"
 github "realm/realm-cocoa"
