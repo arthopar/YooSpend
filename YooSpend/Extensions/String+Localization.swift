@@ -11,8 +11,11 @@ import Foundation
 extension String {
     static func localized(for key: String, replaceValue comment: String) -> String {
         let fallbackLanguage = "en"
-        let fallbackBundlePath = Bundle.main.path(forResource: fallbackLanguage, ofType: "lproj")
-        let fallbackBundle = Bundle(path: fallbackBundlePath!)
+        let fallbackBundlePaths = Bundle.main.path(forResource: fallbackLanguage, ofType: "lproj")
+
+        guard let fallbackBundlePath = fallbackBundlePaths else { return key }
+
+        let fallbackBundle = Bundle(path: fallbackBundlePath)
         let fallbackString = fallbackBundle?.localizedString(forKey: key, value: comment, table: nil)
         let localizedString = Bundle.main.localizedString(forKey: key, value: fallbackString, table: nil)
         

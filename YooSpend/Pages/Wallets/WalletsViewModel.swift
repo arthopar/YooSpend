@@ -10,7 +10,7 @@ import Foundation
 
 struct DataManagers {}
 
-class MainViewModel: BaseViewModel {
+class WalletsViewModel: BaseViewModel {
     let dataManagers: DataManagers
 
     init(dataManagers: DataManagers) {

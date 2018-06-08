@@ -19,6 +19,9 @@ struct Theme {
 
         static var background: UIColor { return #colorLiteral(red: 0.231372549, green: 0.2549019608, blue: 0.368627451, alpha: 1)}
         static var separator: UIColor { return #colorLiteral(red: 0.231372549, green: 0.2549019608, blue: 0.368627451, alpha: 1)}
+
+        static var themedText: UIColor { return #colorLiteral(red: 0.1176470588, green: 0.5333333333, blue: 0.8980392157, alpha: 1) }
+        static var burgerMenuCellSelectedBackground: UIColor { return #colorLiteral(red: 0.9137254902, green: 0.1176470588, blue: 0.3882352941, alpha: 1) }
     }
 
     struct Fonts {

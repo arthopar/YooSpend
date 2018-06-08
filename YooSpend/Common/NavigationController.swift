@@ -14,6 +14,7 @@ class NavigationController: UINavigationController {
         super.viewWillAppear(animated)
         
         self.navigationBar.barTintColor = Theme.Colors.main
+        self.navigationBar.tintColor = UIColor.white
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
