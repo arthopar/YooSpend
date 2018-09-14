@@ -14,10 +14,4 @@ class Parser {
 
         return try decoder.decode(T.self, from: data)
     }
-    
-    func parsData<T: Decodable>(data: Data) throws -> [T] {
-        let decoder = JSONDecoder()
-        
-        return try decoder.decode([T].self, from: data)
-    }
 }

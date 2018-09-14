@@ -35,6 +35,12 @@ extension UIView {
 }
 
 extension UIView {
+    public class var nibName: String {
+        return self.description().components(separatedBy: ".").last!
+    }
+}
+
+extension UIView {
     public static func loadNib() -> UIView {
         let bundle = Bundle.main
         let nibName = self.description().components(separatedBy: ".").last!
@@ -45,7 +51,7 @@ extension UIView {
 
 extension UIView {
     func addBlur() -> UIVisualEffectView {
-        let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let darkBlur = UIBlurEffect(style: UIBlurEffect.Style.dark)
 
         let blurView = UIVisualEffectView()
 

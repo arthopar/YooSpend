@@ -32,8 +32,9 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
 
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 65
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
+        headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.heightAnchor.constraint(equalToConstant: 160).isActive = true
         tableView.tableHeaderView = headerView
     }
@@ -96,7 +97,7 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
         guard let cell = cell as? BurgerMenuCell else { return }
         cell.setup(item: data)
         if data.isSelected {
-            tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
+            tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.none)
         }
     }
 

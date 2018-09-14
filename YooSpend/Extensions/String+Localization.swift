@@ -26,3 +26,16 @@ extension String {
         return String.localized(for: self, replaceValue: "")
     }
 }
+
+extension Double {
+    func toString() -> String {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+
+        let number = NSNumber(value: self)
+
+        return nf.string(from: number) ?? "0"
+    }
+}

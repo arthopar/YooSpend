@@ -10,9 +10,10 @@ import UIKit
 import Core
 
 struct FeedTableViewModel {
-    let icon: UIImageView
+    let icon: UIImage
     let amount: Double
     let currency: Currency
+    let title: String
     let walletName: String
     let lastUpdate: Date
     let categoryName: String

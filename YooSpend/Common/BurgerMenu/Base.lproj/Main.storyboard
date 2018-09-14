@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +27,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeS-ZC-rfQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="BDM-t7-Zvo"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umK-Qp-GNM" customClass="GradientView" customModule="YooSpend" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="289.66666666666669" height="736"/>
@@ -63,7 +63,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P4-7j-Fr9">
-                                                    <rect key="frame" x="62.999999999999986" y="22.333333333333329" width="218.66666666666663" height="21"/>
+                                                    <rect key="frame" x="62.999999999999986" y="22" width="218.66666666666663" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -104,16 +104,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="umK-Qp-GNM" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="8wf-Jr-Tw0"/>
-                            <constraint firstItem="DPM-f4-gps" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BuM-Cu-S66"/>
-                            <constraint firstItem="DPM-f4-gps" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HlG-D0-z1X"/>
+                            <constraint firstItem="DPM-f4-gps" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="BuM-Cu-S66"/>
+                            <constraint firstItem="DPM-f4-gps" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="HlG-D0-z1X"/>
                             <constraint firstItem="YdU-Qy-dsD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NPt-iA-6n6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HeS-ZC-rfQ" secondAttribute="bottom" id="ODj-1p-AOq"/>
+                            <constraint firstAttribute="bottom" secondItem="HeS-ZC-rfQ" secondAttribute="bottom" id="ODj-1p-AOq"/>
                             <constraint firstItem="YdU-Qy-dsD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="VZ1-JK-KdT"/>
-                            <constraint firstItem="HeS-ZC-rfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c5R-EL-xeJ"/>
+                            <constraint firstItem="HeS-ZC-rfQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c5R-EL-xeJ"/>
                             <constraint firstItem="DPM-f4-gps" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hOC-Oh-WKS"/>
                             <constraint firstItem="DPM-f4-gps" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hwh-Zt-LwA"/>
-                            <constraint firstItem="YdU-Qy-dsD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lGs-gZ-xai"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HeS-ZC-rfQ" secondAttribute="trailing" id="o13-tM-fho"/>
+                            <constraint firstItem="YdU-Qy-dsD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lGs-gZ-xai"/>
+                            <constraint firstAttribute="trailing" secondItem="HeS-ZC-rfQ" secondAttribute="trailing" id="o13-tM-fho"/>
                             <constraint firstItem="HeS-ZC-rfQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pcQ-J0-f1q"/>
                             <constraint firstItem="umK-Qp-GNM" firstAttribute="top" secondItem="YdU-Qy-dsD" secondAttribute="top" id="sai-yh-B25"/>
                             <constraint firstItem="umK-Qp-GNM" firstAttribute="trailing" secondItem="YdU-Qy-dsD" secondAttribute="trailing" id="uqg-aQ-xGs"/>
@@ -136,7 +136,7 @@
         <!--Wallets View Controller-->
         <scene sceneID="hld-6l-Gh8">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KPW-oE-7Xz" customClass="WalletsViewController" customModule="YooSpend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalletsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KPW-oE-7Xz" customClass="WalletsViewController" customModule="YooSpend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xUe-Y9-SEM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdJ-dH-NkI">
-                                                    <rect key="frame" x="352" y="44" width="42" height="21"/>
+                                                    <rect key="frame" x="352" y="44.333333333333336" width="42" height="21.000000000000007"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -177,7 +177,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-cq-unN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-cq-unN">
                                                     <rect key="frame" x="70" y="44" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -214,7 +214,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6w4-Pc-qMr" firstAttribute="trailing" secondItem="dn1-tT-YQl" secondAttribute="trailing" id="04w-0p-PoM"/>
+                            <constraint firstAttribute="trailing" secondItem="dn1-tT-YQl" secondAttribute="trailing" id="04w-0p-PoM"/>
                             <constraint firstItem="dn1-tT-YQl" firstAttribute="top" secondItem="6w4-Pc-qMr" secondAttribute="top" id="gg4-8x-caH"/>
                             <constraint firstItem="dn1-tT-YQl" firstAttribute="leading" secondItem="6w4-Pc-qMr" secondAttribute="leading" id="yXk-1s-LL5"/>
                             <constraint firstItem="6w4-Pc-qMr" firstAttribute="bottom" secondItem="dn1-tT-YQl" secondAttribute="bottom" id="z4G-5T-qg9"/>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVI-bx-qeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118.84057971014494" y="797.28260869565224"/>
+            <point key="canvasLocation" x="6" y="805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W7f-y9-op8">

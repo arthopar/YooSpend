@@ -22,6 +22,9 @@ struct Theme {
 
         static var themedText: UIColor { return #colorLiteral(red: 0.1176470588, green: 0.5333333333, blue: 0.8980392157, alpha: 1) }
         static var burgerMenuCellSelectedBackground: UIColor { return #colorLiteral(red: 0.9137254902, green: 0.1176470588, blue: 0.3882352941, alpha: 1) }
+
+        static var negativeText: UIColor { return #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1) }
+        static var positiveText: UIColor { return #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1) }
     }
 
     struct Fonts {

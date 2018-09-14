@@ -16,6 +16,11 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var walletNameLabel: UILabel!
 
     func setup(model: FeedTableViewModel) {
+        iconImageView.image = model.icon
 
+        amountLabel.text = "\(model.amount.toString()) \(model.currency.rawValue)"
+        amountLabel.textColor = model.amount > 0 ? Theme.Colors.positiveText : Theme.Colors.negativeText
+
+        titleLabel.text = model.title
     }
 }
