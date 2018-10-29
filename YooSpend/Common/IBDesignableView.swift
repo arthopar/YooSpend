@@ -38,7 +38,6 @@ import UIKit
 
         backgroundColor = .clear
         contentView = view
-        awakeFromNib()
     }
 
     func loadViewFromNib() -> UIView? {

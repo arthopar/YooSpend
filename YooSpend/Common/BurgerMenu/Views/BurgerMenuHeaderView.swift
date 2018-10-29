@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BurgerMenuHeaderView: UIView {
+class BurgerMenuHeaderView: IBDesignableView {
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
 

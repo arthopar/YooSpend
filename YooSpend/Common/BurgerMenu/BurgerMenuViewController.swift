@@ -13,37 +13,32 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var menuLeadinConstraint: NSLayoutConstraint!
+    @IBOutlet weak var menuWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var semitransparentView: UIView!
-    
-    var burgerMenuNavigation: UINavigationController?
+    @IBOutlet weak var gestureScreenEdgePan: UIScreenEdgePanGestureRecognizer!
 
-    let headerView = BurgerMenuHeaderView.loadNib()
+    private var burgerMenuNavigation: UINavigationController?
+
+    private let maxBlackViewAlpha: CGFloat = 0.5
+    private let animationDuration: TimeInterval = 0.3
+
     let viewModel = BurgerMenuViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        menuLeadinConstraint.constant = -tableView.frame.width
-        semitransparentView.isHidden = true
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(menuTapped))
-        semitransparentView.isUserInteractionEnabled = true
-        semitransparentView.addGestureRecognizer(gestureRecognizer)
-        semitransparentView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.02377300613)
-
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 65
         tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.heightAnchor.constraint(equalToConstant: 160).isActive = true
-        tableView.tableHeaderView = headerView
+
+        menuLeadinConstraint.constant = -tableView.frame.width
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         tableView.reloadData()
-        tableView.sizeHeaderToFit()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,25 +49,6 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
 
             let navigationItem = burgerMenuNavigation?.viewControllers.first?.navigationItem
             navigationItem?.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_sort_white"), style: .plain, target: self, action: #selector(menuTapped))
-        }
-    }
-
-    @objc func menuTapped() {
-        let souldShow = menuLeadinConstraint.constant != 0
-
-
-        UIView.animate(withDuration: 0.5, animations: {[weak self] in
-            if souldShow {
-                self?.semitransparentView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
-                self?.semitransparentView.isHidden = false
-                self?.menuLeadinConstraint.constant = 0
-            } else {
-                self?.semitransparentView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.02377300613)
-                self?.menuLeadinConstraint.constant = -(self?.tableView.frame.width ?? 0)
-            }
-            self?.view.layoutSubviews()
-        }) { c in
-            self.semitransparentView.isHidden = !souldShow
         }
     }
 
@@ -103,6 +79,73 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          let data = viewModel.dataSource[indexPath.row]
+
         showViewController(for: data.destination.rawValue)
+    }
+
+    @IBAction func gestureScreenEdgePan(_ sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.began {
+            semitransparentView.alpha = 0
+        } else if (sender.state == UIGestureRecognizer.State.changed) {
+            let translationX = sender.translation(in: sender.view).x
+
+            if -menuWidthConstraint.constant + translationX > 0 {
+                updateBurgerMenu(shouldShow: false)
+            } else if translationX < 0 {
+                updateBurgerMenu(shouldShow: false)
+            } else {
+                menuLeadinConstraint.constant = -menuWidthConstraint.constant + translationX
+                let ratio = translationX / menuWidthConstraint.constant
+                let alphaValue = ratio * maxBlackViewAlpha
+                semitransparentView.alpha = alphaValue
+            }
+        } else {
+            let shouldShow = menuLeadinConstraint.constant > -menuWidthConstraint.constant / 2
+            self.updateBurgerMenu(shouldShow: shouldShow)
+        }
+    }
+
+    @IBAction func gesturePan(_ sender: UIPanGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.changed {
+            let translationX = sender.translation(in: sender.view).x
+
+            if translationX > 0 {
+                updateBurgerMenu(shouldShow: true)
+            } else if translationX < -menuWidthConstraint.constant {
+                updateBurgerMenu(shouldShow: false)
+            } else {
+                menuLeadinConstraint.constant = translationX
+                let ratio = (menuWidthConstraint.constant + translationX) / menuWidthConstraint.constant
+                let alphaValue = ratio * maxBlackViewAlpha
+                semitransparentView.alpha = alphaValue
+            }
+        } else if sender.state == UIGestureRecognizer.State.ended {
+            let shouldShow = menuLeadinConstraint.constant > -menuWidthConstraint.constant / 2
+            self.updateBurgerMenu(shouldShow: shouldShow)
+        }
+    }
+
+    @IBAction func gestureTap(_ sender: UITapGestureRecognizer) {
+        self.updateBurgerMenu(shouldShow: false)
+    }
+
+    @objc func menuTapped() {
+        updateBurgerMenu(shouldShow: true)
+    }
+
+    private func updateBurgerMenu(shouldShow: Bool) {
+        UIView.animate(withDuration: animationDuration, animations: {[weak self] in
+            guard let `self` = self else { return }
+            if shouldShow {
+                self.semitransparentView.alpha = self.maxBlackViewAlpha
+                self.menuLeadinConstraint.constant = 0
+            } else {
+                self.semitransparentView.alpha = 0
+                self.menuLeadinConstraint.constant = -self.tableView.frame.width
+            }
+            self.view.layoutSubviews()
+        }) { c in
+            //self.semitransparentView.isHidden = !shouldShow
+        }
     }
 }

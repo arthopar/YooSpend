@@ -4,18 +4,29 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BurgerMenuHeaderView" customModule="YooSpend" customModuleProvider="target">
+            <connections>
+                <outlet property="headerImage" destination="bCB-Lg-4y9" id="ySD-Q9-JnS"/>
+                <outlet property="nameLabel" destination="3Yv-nr-wcs" id="Vuq-Nf-w7u"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="iN0-l3-epB" customClass="BurgerMenuHeaderView" customModule="YooSpend" customModuleProvider="target">
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-Fm-SV3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="106" id="K6M-Y4-cpf"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bCB-Lg-4y9">
                     <rect key="frame" x="16" y="23" width="60" height="60"/>
                     <constraints>
@@ -23,26 +34,26 @@
                         <constraint firstAttribute="height" constant="60" id="r9K-2U-05e"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yv-nr-wcs">
-                    <rect key="frame" x="94" y="42.5" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yv-nr-wcs">
+                    <rect key="frame" x="94" y="42.5" width="83" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="S2g-Fm-SV3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6nd-HQ-SHW"/>
+                <constraint firstAttribute="bottom" secondItem="S2g-Fm-SV3" secondAttribute="bottom" id="JT4-MW-LvT"/>
                 <constraint firstItem="bCB-Lg-4y9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JiW-Ay-ltm"/>
                 <constraint firstItem="bCB-Lg-4y9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OkA-SJ-xQJ"/>
+                <constraint firstItem="S2g-Fm-SV3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Twl-uK-Xnn"/>
                 <constraint firstItem="3Yv-nr-wcs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VK1-f5-spX"/>
                 <constraint firstItem="3Yv-nr-wcs" firstAttribute="leading" secondItem="bCB-Lg-4y9" secondAttribute="trailing" constant="18" id="Wk6-jd-7G9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Yv-nr-wcs" secondAttribute="trailing" constant="16" id="jm6-SW-sYz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="S2g-Fm-SV3" secondAttribute="trailing" id="nuw-Aa-zER"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="headerImage" destination="bCB-Lg-4y9" id="C7d-XZ-kwh"/>
-                <outlet property="nameLabel" destination="3Yv-nr-wcs" id="nYB-kC-Mqc"/>
-            </connections>
             <point key="canvasLocation" x="24.5" y="-229"/>
         </view>
     </objects>

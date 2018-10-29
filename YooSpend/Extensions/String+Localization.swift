@@ -18,7 +18,7 @@ extension String {
         let fallbackBundle = Bundle(path: fallbackBundlePath)
         let fallbackString = fallbackBundle?.localizedString(forKey: key, value: comment, table: nil)
         let localizedString = Bundle.main.localizedString(forKey: key, value: fallbackString, table: nil)
-        
+
         return localizedString
     }
     
