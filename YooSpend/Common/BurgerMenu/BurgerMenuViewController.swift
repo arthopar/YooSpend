@@ -90,7 +90,7 @@ class BurgerMenuViewController: UIViewController, UITableViewDataSource, UITable
             let translationX = sender.translation(in: sender.view).x
 
             if -menuWidthConstraint.constant + translationX > 0 {
-                updateBurgerMenu(shouldShow: false)
+                updateBurgerMenu(shouldShow: true)
             } else if translationX < 0 {
                 updateBurgerMenu(shouldShow: false)
             } else {
